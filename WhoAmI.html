@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+        <style>
+            .banner{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.205)),url('./bg2.jpg');
+                width: 100%!important;
+                height: 210px;
+                background-size:cover;
+            }
+            .img-box{
+                width:125px!important;
+                height: 125px!important;
+                overflow: hidden;
+                border-radius: 100%;
+                border: 2px solid rgb(255, 0, 98);
+                margin: auto;
+                margin-top: -79px;
+                padding: 4px;
+                background: rgb(221, 221, 221);
+            }
+            .img-box img{
+                border-radius: 100%;
+            }
+            .box{
+                margin: auto;
+                padding: 10px;
+                width: 90%;
+                background: rgb(255, 255, 255);
+
+            }
+            .i-box{
+                /* border: 1px solid red; */
+                width: 40px;
+                height: 40px;
+                font-size: 18px!important;
+                border-radius: 2px;
+                /* box-shadow: 0px 3px 9px 0px rgba(185, 185, 185, 0.692); */
+                transition: 0.2s ease;
+            }
+            li:hover .i-box{
+                border: 1px solid red;
+                width: 40px;
+                height: 40px;
+                font-size: 18px!important;
+                border-radius: 2px;
+                box-shadow: 0px 3px 9px 0px rgba(185, 185, 185, 0.692);
+                transition: 0.2s ease;
+            }
+            .ic{
+                color: rgb(255, 0, 115);
+                font-size: 24px;
+            }
+            .font-bold{
+                font-weight: 700;
+            }
+            .email{
+                color: rgb(247, 2, 153);
+            }
+            .row li{
+                 width: 280px!important;
+                margin: auto;
+                cursor: pointer;
+            }
+            .icn{
+                font-size: 24px;
+                color: black;
+
+            }
+            .navbar-nav{
+                background: red;
+                display: flex!important;
+                float: left!important;
+            }
+            .bbtn{
+                padding: 0px;
+                display: flex;
+                align-items: center!important;
+                background: transparent;
+                border: 0px;
+                font-size: 24px!important;
+            }
+            .icn2{
+                font-size: 35px!important;
+            }
+        </style>
+</head>
+
+<body>
+    <nav class="navbar  navbar-light bg-light d-flex align-items-center">
+        <div class="container">
+         <button class="bbtn"><ion-icon name="menu-outline" class="icn2"></ion-icon></button>
+            <a class="navbar-brand font-bold text-primary" href="#">Random User</a>
+            <form class="d-lg-flex d-md-flex d-none">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+             <ul class="d-flex list-unstyled align-items-center my-auto">
+                 <li class="nav-item">
+                     <a href="" class="nav-link">
+                        <ion-icon name="mail-outline" class="icn"></ion-icon>
+                     </a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="" class="nav-link">
+                        <ion-icon name="notifications-outline" class="icn"></ion-icon>
+                     </a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="" class="nav-link">
+                        <ion-icon name="person-outline" class="icn"></ion-icon>
+                    </a>
+                 </li>
+             </ul>
+          </div>
+        </div>
+      </nav>
+       <div class="container py-3">
+       <div class="banner d-flex justify-content-center align-items-center">
+             <!-- <h1 class="h1 text-white">API Practice</h1> -->
+       </div>
+        <div class="box">
+            <div class="img-box" id="img">
+                 
+            </div>
+            <h4 class="text-center mt-2 font-bold" id="name"></h4>
+            <h6 id="email" class="email text-center"> </h6>
+
+            <div class="container">
+                 <div class="row overflow-hidden">
+                      <div class="col-lg-4 col-md-4 col-12 mt-2 overflow-hidden">
+                        <ul class="list-unstyled overflow-hidden">
+                            <li class="mt-2  ">
+                                      <div class="b">
+                                          <label class="py-2 font-bold" for="">Phone</label>
+                               <div class="d-flex align-items-center">
+                                 <span class="i-box d-flex justify-content-center align-items-center">
+                                    <ion-icon class="ic" name="call-outline"></ion-icon>
+                                   </span><span class=" px-2" id="phone"></span>
+                               </div>
+                                      </div>
+                            </li>
+                            <li class="mt-2  ">
+                                      <div class="b">
+                                          <label class="py-2 font-bold" for="">Country</label>
+                               <div class="d-flex align-items-center">
+                                 <span class="i-box d-flex justify-content-center align-items-center">
+                                    <ion-icon name="earth-outline" class="ic"></ion-icon>
+                                   </span><span class=" px-2" id="country"></span>
+                               </div>
+                                      </div>
+                            </li>
+                            <li class="mt-2  ">
+                                      <div class="b">
+                                          <label class="py-2 font-bold" for="">City</label>
+                               <div class="d-flex align-items-center">
+                                 <span class="i-box d-flex justify-content-center align-items-center">
+                                    <ion-icon class="ic" name="home-outline"></ion-icon>
+                                   </span><span class=" px-2" id="city"></span>
+                               </div>
+                                      </div>
+                            </li>
+                            </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-12 mt-2">
+                        <ul class="list-unstyled">
+                            <li class="mt-2  ">
+                                      <div class="b">
+                                          <label class="py-2 font-bold" for="">Gender</label>
+                               <div class="d-flex align-items-center">
+                                 <span class="i-box d-flex justify-content-center align-items-center">
+                                    <ion-icon class="ic" name="man-outline"></ion-icon>
+                                   </span><span class=" px-2" id="gender"></span>
+                               </div>
+                                      </div>
+                            </li>
+                            <li class="mt-2  ">
+                                      <div class="b">
+                                          <label class="py-2 font-bold" for="">Post Code</label>
+                               <div class="d-flex align-items-center">
+                                 <span class="i-box d-flex justify-content-center align-items-center">
+                                     <ion-icon class="ic" name="person-outline"></ion-icon>
+                                   </span><span class=" px-2" id="postcode"></span>
+                               </div>
+                                      </div>
+                            </li>
+                            <li class="mt-2  ">
+                                      <div class="b">
+                                          <label class="py-2 font-bold" for="">State</label>
+                               <div class="d-flex align-items-center">
+                                 <span class="i-box d-flex justify-content-center align-items-center">
+                                    <ion-icon class="ic" name="code-working-outline"></ion-icon>
+                                   </span><span class=" px-2" id="state"></span>
+                               </div>
+                                      </div>
+                            </li>
+                            </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-12 mt-2">
+                              <ul class="list-unstyled">
+                               <li class="mt-2  ">
+                                         <div class="b">
+                                             <label class="py-2 font-bold" for="">Username</label>
+                                  <div class="d-flex align-items-center">
+                                    <span class="i-box d-flex justify-content-center align-items-center">
+                                        <ion-icon class="ic" name="person-outline"></ion-icon>
+                                      </span><span class=" px-2" id="username"></span>
+                                  </div>
+                                         </div>
+                               </li>
+                               <li class="mt-2  ">
+                                       <div class="b">
+                                             <label class="py-2 font-bold" for="">Barthday</label>
+                                  <div class="d-flex align-items-center">
+                                    <span class="i-box d-flex justify-content-center align-items-center">
+                                        <ion-icon class="ic" name="calendar-outline"></ion-icon>
+                                      </span><span class=" px-2" id="date"></span>
+                                  </div>
+                                       </div>
+                               </li>
+                               <li class="mt-2  ">
+                                        <div class="b">
+                                             <label class="py-2 font-bold" for="">Age</label>
+                                  <div class="d-flex align-items-center">
+                                    <span class="i-box d-flex justify-content-center align-items-center">
+                                        <ion-icon class="ic" name="aperture-outline"></ion-icon>
+                                      </span><span class=" px-2" id="age"></span>
+                                  </div>
+                               </li>
+                                        </div>
+                           </ul>
+                      </div>
+                 </div>
+            </div>
+        </div>
+          
+        
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        fetch('https://randomuser.me/api')
+            .then(res => res.json())
+            .then(data => {
+                const user = data.results[0];
+                const name = user.name;
+                
+                const userName = `${user.name.title} ${user.name.first} ${user.name.last}`;
+                const profilePictuer = `${user.picture.large}`;
+                const loginInfo = `${user.login.username}`;
+                const date = `${user.registered.date}`
+                const age = `${user.registered.age}`;
+                const country = `${user.location.country}`;
+                const city = `${user.location.city}`;
+                const postCode = `${user.location.postcode}`;
+                const state = `${user.location.state}`;
+
+                document.getElementById('name').innerText = userName;
+                document.getElementById('username').innerText = loginInfo;
+                document.getElementById('date').innerText = date;
+                document.getElementById('age').innerText = age;
+                document.getElementById('email').innerText = user.email;
+                document.getElementById('phone').innerText = user.phone;
+                document.getElementById('country').innerText = country;
+                document.getElementById('city').innerText = city;
+              document.getElementById('gender').innerText = user.gender;
+              document.getElementById('postcode').innerText = postCode;
+              document.getElementById('state').innerText = state;
+                // document.getElementById('img').innerHTML = profilePictuer;
+                const imgBox =  document.getElementById('img');
+                imgBox.innerHTML = `<img src="${profilePictuer}" class="w-100 h-100 img-fluid"/>`;
+
+                console.log(user,postCode);
+            })
+    </script>
+</body>
+
+</html>
